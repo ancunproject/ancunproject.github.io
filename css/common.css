@@ -1,0 +1,15 @@
+html, body{
+  margin: 0;
+  padding: 0;
+}
+
+/* 样式 */
+.main-wrap img{
+  width: 100%;
+}
+.video-wrap{
+  padding: 4.7%;
+}
+.play-btn-none .vjs-big-play-button{
+  display: none!important;
+}
