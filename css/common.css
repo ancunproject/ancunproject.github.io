@@ -2,14 +2,37 @@ html, body{
   margin: 0;
   padding: 0;
 }
+img{
+  display: block;
+}
 
 /* 样式 */
 .main-wrap img{
   width: 100%;
 }
 .video-wrap{
-  padding: 4.7%;
+  background-image: url('../image/video_bg.jpg');
+  background-size: cover;
+}
+.video-content{
+  padding: 4.4% 6.7%;
+}
+.video-inner{
+  margin: 0 auto;
+  border-radius: 30px;
+  overflow: hidden;
 }
 .play-btn-none .vjs-big-play-button{
-  display: none!important;
+  width: 88px!important;
+  height: 88px!important;
+  border-radius: 44px!important;
+  border: none!important;
+  background: url('../image/video-btn.png') no-repeat;
+  top: 50%!important;
+  left: 50%!important;
+  margin-left: -44px;
+  margin-top: -44px;
+}
+.play-btn-none .vjs-big-play-button .vjs-icon-placeholder{
+  display: none;
 }

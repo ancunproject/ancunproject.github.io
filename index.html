@@ -26,11 +26,13 @@
 				<img src="./image/1.jpg" alt="">
 			</div>
 			<div class="video-wrap">
-				<div class="video-inner">
-					<video id="my-video" class="video-js play-btn-none" controls preload="auto" poster="./image/2.jpg" data-setup="{}">
-						<source src="./image/test03.mp4" type="video/mp4">
-						<p class="vjs-no-js">请确保您使用的浏览器允许使用JavaScript, 或者升级<a href="http://videojs.com/html5-video-support/" target="_blank">支持HTML5视频</a> </p>
-					</video>
+				<div class="video-content">
+					<div class="video-inner">
+						<video id="my-video" class="video-js play-btn-none" controls preload="auto" poster="./image/video_cover.png" data-setup="{}">
+							<source src="./image/test03.mp4" type="video/mp4">
+							<p class="vjs-no-js">请确保您使用的浏览器允许使用JavaScript, 或者升级<a href="http://videojs.com/html5-video-support/" target="_blank">支持HTML5视频</a> </p>
+						</video>
+					</div>
 				</div>
 			</div>
 			<div>
@@ -42,9 +44,21 @@
 			<div>
 				<img src="./image/5.jpg" alt="">
 			</div>
+			<div>
+				<img src="./image/6.jpg" alt="">
+			</div>
+			<div>
+				<img src="./image/7.jpg" alt="">
+			</div>
+			<div>
+				<img src="./image/8.jpg" alt="">
+			</div>
 		</div>
 	</div>
 	<script type="text/javascript">
+	var bodyWidth = document.body.offsetWidth || document.documentElement.clientWidth || document.body.clientWidth
+	var bodyHeight = (bodyWidth * 3) / 5
+	$('.video-wrap').css('height', bodyHeight + 'px')
 	var myPlayer = videojs('my-video');
 	var width = $(".video-wrap").find("div[class='video-inner']").css("width");
 	if(width!=null && width!="" && width!="null"){
@@ -59,6 +73,9 @@
 	});
 	
 	window.addEventListener('resize', () => {
+		bodyWidth = document.body.offsetWidth || document.documentElement.clientWidth || document.body.clientWidth
+		bodyHeight = (bodyWidth * 3) / 5
+		$('.video-wrap').css('height', bodyHeight + 'px')
 		let width1 = $(".video-wrap").find("div[class='video-inner']").css("width");
 		if(width1!=null && width1!="" && width1!="null"){
 			width1 = parseInt(width1.replace("px",""));
